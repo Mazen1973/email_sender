@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Sender</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Configuration file -->
+  <script src="config.js"></script>
+  <script>
+    // Initialize EmailJS with config
+    (function(){
+      emailjs.init({ publicKey: window.EMAILJS_CONFIG.PUBLIC_KEY });
+    })();
+  </script>
+</head>
+<body>
+  <main class="container">
+    <h1>Contact Form</h1>
+    <div class="card">
+      <input id="name" type="text" placeholder="Your name" required>
+      <input id="email" type="email" placeholder="Your email" required>
+      <input id="recipient_email" type="email" placeholder="Send to (recipient email)" required>
+      <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+      <button id="sendBtn">Send Message</button>
+      <p id="status"></p>
+      <p class="hint">
+        Ref: layout inspired by my portfolio contact section.
+      </p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

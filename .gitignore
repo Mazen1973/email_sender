@@ -1,0 +1,15 @@
+# Environment variables (contains sensitive data)
+.env
+
+# Configuration files with sensitive data
+config.js
+
+# Node modules (if you add them later)
+node_modules/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
